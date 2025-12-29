@@ -1,12 +1,12 @@
 body  {
-    margin: 20px;
-    background-color: rgb(240, 209, 163);
+    margin: 50px;
+    background-color: rgb(180, 177, 172);
 }
 
 p {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 a {
-    font-size: 20px;
+    font-size:  16px;
 }
