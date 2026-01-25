@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 1</title>
     <link rel="stylesheet" href="../styles.css">
+    <style>
+        #CSRF {
+            background-color: aqua;
+        }
+    </style>
 </head>
 <body>
     <a href="../web-bits.html">Home</a>
@@ -24,5 +29,35 @@
         So this 80-hour course will really be something where I should keep my eye on. And I will. Because I still need to unravel backend and databases about which
         there is ample content over here. And the good thing is I will be ablt to learn and understand it from the scratch. 
     </p>
+    <div id="CSRF">
+        <h4>Cross-Site Request Forgery</h4>
+        <p><a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">Cross-Site Request Forgery (CSRF or XSRF)</a>is a web security vulnerability that tricks an
+            authenticated user into executing unwanted, state-changing actions—such as changing passwords, transferring funds, or updating email addresses—on a trusted
+            website without their consent. It exploits the browser's automatic inclusion of credentials (cookies) in requests. 
+        </p>
+        <h4>Key Aspects of CSRF:</h4>
+        <ul>
+            <li>
+                <b>Mechanism:</b>An attacker tricks a victim into visiting a malicious site or clicking a link, which triggers an HTTP request to a vulnerable application where the
+                 user is already logged in.
+            </li>
+            <li>
+                <b>Target:</b> Focuses on state-changing requests (POST, PUT, DELETE) rather than data theft, as the attacker does not receive the response.
+            </li>
+            <li>
+                <b>Examples: </b>Forcing a user to click a link that transfers money, changes account email, or updates credentials. 
+            </li>
+        </ul>
+        <h4>Prevention Strategies:</h4>
+        <ul>
+            <li><b>Anti-CSRF Tokens:</b>Implement unique, secret, and unpredictable tokens for each request (or session) that the server validates.</li>
+            <li><b>SameSite Cookie Attribute:</b> Configure cookies to SameSite=Strict or SameSite=Lax to prevent browsers from sending them with cross-site requests.</li>
+            <li><b>Double Submit Cookies:</b> Send a random value in both a cookie and a request parameter, ensuring they match.</li>
+            <li><b>Custom Request Headers:</b> Using AJAX or APIs to require custom headers that cannot be set across origins. </li>
+        </ul>
+        <p>
+            CSRF differs from Cross-Site Scripting (XSS) in that XSS exploits the trust a user has in a site, while CSRF exploits the trust a site has in a user's browser. 
+        </p>
+    </div>
 </body>
 </html>
